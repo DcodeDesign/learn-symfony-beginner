@@ -40,20 +40,24 @@ class __TwigTemplate_163dfea594712bb065953d24f1c75dc12682e4e123184f1cad3274d7283
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "hello.html.twig"));
 
         // line 1
-        echo "<div> ";
-        echo twig_escape_filter($this->env, twig_upper_filter($this->env, (isset($context["title"]) || array_key_exists("title", $context) ? $context["title"] : (function () { throw new RuntimeError('Variable "title" does not exist.', 1, $this->source); })())), "html", null, true);
+        echo twig_include($this->env, $context, "header.html.twig", array(), true, false, true);
+        echo "
+
+<div> ";
+        // line 3
+        echo twig_escape_filter($this->env, twig_upper_filter($this->env, (isset($context["title"]) || array_key_exists("title", $context) ? $context["title"] : (function () { throw new RuntimeError('Variable "title" does not exist.', 3, $this->source); })())), "html", null, true);
         echo " </div>
 
 ";
-        // line 4
+        // line 6
         echo "
 <ul>
     ";
-        // line 6
+        // line 8
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["array"]) || array_key_exists("array", $context) ? $context["array"] : (function () { throw new RuntimeError('Variable "array" does not exist.', 6, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["array"]) || array_key_exists("array", $context) ? $context["array"] : (function () { throw new RuntimeError('Variable "array" does not exist.', 8, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 7
+            // line 9
             echo "        <li>";
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "</li>
@@ -62,8 +66,14 @@ class __TwigTemplate_163dfea594712bb065953d24f1c75dc12682e4e123184f1cad3274d7283
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 9
-        echo "<ul>";
+        // line 11
+        echo "</ul>
+
+";
+        // line 13
+        echo twig_include($this->env, $context, "footer.html.twig", array(), true, false, true);
+        echo "
+";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -84,12 +94,14 @@ class __TwigTemplate_163dfea594712bb065953d24f1c75dc12682e4e123184f1cad3274d7283
 
     public function getDebugInfo()
     {
-        return array (  66 => 9,  57 => 7,  53 => 6,  49 => 4,  43 => 1,);
+        return array (  74 => 13,  70 => 11,  61 => 9,  57 => 8,  53 => 6,  48 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div> {{title | upper }} </div>
+        return new Source("{{ include('header.html.twig', sandboxed = true) }}
+
+<div> {{title | upper }} </div>
 
 {# Un commentaire #}
 
@@ -97,6 +109,9 @@ class __TwigTemplate_163dfea594712bb065953d24f1c75dc12682e4e123184f1cad3274d7283
     {% for item in array %}
         <li>{{ item }}</li>
     {% endfor %}
-<ul>", "hello.html.twig", "/Users/workspace/Documents/WORKSPACE/WORKSPACE-PHP/learn_symfony/templates/hello.html.twig");
+</ul>
+
+{{ include('footer.html.twig', sandboxed = true) }}
+", "hello.html.twig", "/Users/workspace/Documents/WORKSPACE/WORKSPACE-PHP/learn_symfony/templates/hello.html.twig");
     }
 }

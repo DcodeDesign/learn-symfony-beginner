@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+{{ include('header.html.twig', sandboxed = true) }}
+
+        <ul>
+            <li><a href="{{ path('blog_index') }}" title="blog_index" >blog_index</a></li>
+            <li><a href="{{ path('hello_index') }}" title="hello_index" >hello_index</a></li>
+            <li><a href="{{ path('hello_index_name',  {'name': 'Jean'}) }}" title="hello_index_name" >hello_index_name</a></li>
+            <li><a href="{{ path('hello_index_local') }}" title="hello_index_local" >hello_index_local</a></li>
+            <li><a href="{{ path('service') }}" title="service" >Service</a></li>
+            <li><a href="{{ path('serviceII') }}" title="serviceII" >ServiceII</a></li>
+        </ul>
     </body>
 </html>
+
+{{ include('footer.html.twig', sandboxed = true) }}

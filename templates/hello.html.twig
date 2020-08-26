@@ -1,3 +1,5 @@
+{{ include('header.html.twig', sandboxed = true) }}
+
 <div> {{title | upper }} </div>
 
 {# Un commentaire #}
@@ -6,4 +8,6 @@
     {% for item in array %}
         <li>{{ item }}</li>
     {% endfor %}
-<ul>
+</ul>
+
+{{ include('footer.html.twig', sandboxed = true) }}

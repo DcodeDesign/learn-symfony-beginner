@@ -1,0 +1,26 @@
+{{ include('header.html.twig', sandboxed = true) }}
+
+<h3> Formulaire :</h3>
+
+{{ form_start(form) }}
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.name, 'Votre nom', {'label_attr': {'class': 'label_name'}}) }}
+            {{ form_widget(form.name, {'attr': {'class': 'name_field'}}) }}
+        </div>
+        <div class="col" id="some-custom-id">
+            {{ form_label(form.email, 'Votre email', {'label_attr': {'class': 'label_email'}}) }}
+            {{ form_widget(form.email, {'attr': {'class': 'email_field'}}) }}
+        </div>
+        <div class="col" id="some-custom-id">
+            {{ form_label(form.date, 'Votre date de naissance', {'label_attr': {'class': 'label_date'}}) }}
+            {{ form_widget(form.date, {'attr': {'class': 'date_field'}}) }}
+        </div>
+    </div>
+{{ form_end(form) }}
+
+{{ include('footer.html.twig', sandboxed = true) }}
