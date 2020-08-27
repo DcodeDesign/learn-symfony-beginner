@@ -46,3 +46,36 @@ commande pour visualiser les services existant déjà dans symfony
 ```
 php bin/console debug:autowiring
 ```
+
+## Doctrine
+
+Symfony fournit tous les outils dont vous avez besoin pour utiliser les bases de données dans vos applications grâce à Doctrine , le meilleur ensemble de bibliothèques PHP pour travailler avec des bases de données. Ces outils prennent en charge les bases de données relationnelles comme MySQL et PostgreSQL ainsi que les bases de données NoSQL comme MongoDB.
+
+Installation :
+
+```
+composer require symfony/orm-pack
+composer require --dev symfony/maker-bundle
+```
+
+Create db :
+
+```
+bin/console doctrine:database:create
+```
+
+Create Entity :
+
+```
+ php bin/console make:entity
+ php bin/console make:migration
+ php bin/console doctrine:migrations:migrate
+```
+
+Modifier la db :
+
+```
+php bin/console make:entity
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+```

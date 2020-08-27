@@ -23,6 +23,6 @@ return [
     'service' => [[], ['_controller' => 'App\\Controller\\HelloController::service'], [], [['text', '/service']], [], []],
     'serviceII' => [[], ['_controller' => 'App\\Controller\\HelloController::serviceII'], [], [['text', '/serviceII']], [], []],
     'blog_index' => [[], ['_controller' => 'App\\Controller\\HelloController::index'], [], [['text', '/']], [], []],
-    'app_user_createuserform' => [[], ['_controller' => 'App\\Controller\\UserController::createUserForm'], [], [['text', '/user']], [], []],
+    'form' => [[], ['_controller' => 'App\\Controller\\UserController::createUserForm'], [], [['text', '/user']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\HelloController::hello'], [], [['text', '/hello']], [], []],
 ];

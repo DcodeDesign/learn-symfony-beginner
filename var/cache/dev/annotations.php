@@ -73,11 +73,15 @@ return [[
 '%5B%5BC%5DApp%5CController%5CHelloController%23helloDefault%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CHelloController%23helloLocal%5D%5B1%5D' => 7,
 '%5B%5BC%5DApp%5CController%5CHelloController%23helloLocal%5D%5B1%5D' => 2,
-'%5BApp%5CController%5CHelloController%23index%5D%5B1%5D' => 8,
+'%5BApp%5CController%5CHelloController%23service%5D%5B1%5D' => 8,
+'%5B%5BC%5DApp%5CController%5CHelloController%23service%5D%5B1%5D' => 2,
+'%5BApp%5CController%5CHelloController%23serviceII%5D%5B1%5D' => 9,
+'%5B%5BC%5DApp%5CController%5CHelloController%23serviceII%5D%5B1%5D' => 2,
+'%5BApp%5CController%5CHelloController%23index%5D%5B1%5D' => 10,
 '%5B%5BC%5DApp%5CController%5CHelloController%23index%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CUserController%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CController%5CUserController%5D%5B1%5D' => 2,
-'%5BApp%5CController%5CUserController%23createUserForm%5D%5B1%5D' => 9,
+'%5BApp%5CController%5CUserController%23createUserForm%5D%5B1%5D' => 11,
 '%5B%5BC%5DApp%5CController%5CUserController%23createUserForm%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CUser%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CUser%5D%5B1%5D' => 2,
@@ -89,10 +93,16 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CUser%23getEmail%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CUser%23setEmail%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CUser%23setEmail%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUser%23getDate%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUser%23getDate%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUser%23setDate%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUser%23setDate%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CUser%24name%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CUser%24name%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CUser%24email%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CUser%24email%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUser%24date%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUser%24date%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 1,
 '%5B%5BC%5DDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23setContainer%5D%5B1%5D' => 1,
@@ -632,7 +642,7 @@ return [[
 
 0 => 'N;',
 1 => [],
-2 => 1598393321,
+2 => 1598468930,
 3 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -756,6 +766,50 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
+                    '/service',
+                ],
+                'name' => [
+                    'service',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+9 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/serviceII',
+                ],
+                'name' => [
+                    'serviceII',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+10 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
                     '/',
                 ],
                 'name' => [
@@ -769,7 +823,7 @@ return [[
         []
     );
 },
-9 => static function () {
+11 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),

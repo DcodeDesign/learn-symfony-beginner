@@ -20,7 +20,7 @@ return [
         '/service' => [[['_route' => 'service', '_controller' => 'App\\Controller\\HelloController::service'], null, null, null, false, false, null]],
         '/serviceII' => [[['_route' => 'serviceII', '_controller' => 'App\\Controller\\HelloController::serviceII'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'blog_index', '_controller' => 'App\\Controller\\HelloController::index'], null, null, null, false, false, null]],
-        '/user' => [[['_route' => 'app_user_createuserform', '_controller' => 'App\\Controller\\UserController::createUserForm'], null, null, null, false, false, null]],
+        '/user' => [[['_route' => 'form', '_controller' => 'App\\Controller\\UserController::createUserForm'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

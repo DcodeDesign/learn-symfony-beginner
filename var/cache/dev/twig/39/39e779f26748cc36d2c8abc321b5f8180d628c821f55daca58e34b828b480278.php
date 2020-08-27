@@ -68,12 +68,16 @@ class __TwigTemplate_29e83b98b3892349a68580f3d2206d148cae490df982519b28e5979d553
         // line 9
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("serviceII");
         echo "\" title=\"serviceII\" >ServiceII</a></li>
+             <li><a href=\"";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("form");
+        echo "\" title=\"form\" >form</a></li>
         </ul>
     </body>
 </html>
 
 ";
-        // line 14
+        // line 15
         echo twig_include($this->env, $context, "footer.html.twig", array(), true, false, true);
         echo "
 ";
@@ -97,7 +101,7 @@ class __TwigTemplate_29e83b98b3892349a68580f3d2206d148cae490df982519b28e5979d553
 
     public function getDebugInfo()
     {
-        return array (  77 => 14,  69 => 9,  65 => 8,  61 => 7,  57 => 6,  53 => 5,  49 => 4,  43 => 1,);
+        return array (  81 => 15,  73 => 10,  69 => 9,  65 => 8,  61 => 7,  57 => 6,  53 => 5,  49 => 4,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -111,6 +115,7 @@ class __TwigTemplate_29e83b98b3892349a68580f3d2206d148cae490df982519b28e5979d553
             <li><a href=\"{{ path('hello_index_local') }}\" title=\"hello_index_local\" >hello_index_local</a></li>
             <li><a href=\"{{ path('service') }}\" title=\"service\" >Service</a></li>
             <li><a href=\"{{ path('serviceII') }}\" title=\"serviceII\" >ServiceII</a></li>
+             <li><a href=\"{{ path('form') }}\" title=\"form\" >form</a></li>
         </ul>
     </body>
 </html>

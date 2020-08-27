@@ -8,21 +8,25 @@ use Symfony\Component\Form\Extension\Core\Type\{TextType, ButtonType, EmailType,
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Form\UserType;
-use App\Entity\User;
+use App\Entity\TableUser;
 
 class UserController extends AbstractController
 {
     /**
-     * @Route("/user")
+     * @Route("/user", name="form")
      */
     function createUserForm(Request $request)
     {
-        $user = new User();
+        $user = new TableUser();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
         
         if ($form->isSubmitted() && $form->isValid()) 
         {
+            $userFormInput = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($userFormInput);
+            $entityManager->flush();
             return new Response('formulaire valide !');
         }
 
