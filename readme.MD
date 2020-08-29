@@ -61,7 +61,7 @@ composer require --dev symfony/maker-bundle
 Create db :
 
 ```
-bin/console doctrine:database:create
+php bin/console doctrine:database:create
 ```
 
 Create Entity :
